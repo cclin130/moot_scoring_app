@@ -1,6 +1,4 @@
 # University Moot Competition Scoring Application
-Python application to normalize raw judge scores for moot competitions.
-
 Moot competitions are a type of public-speaking competition that focuses on legal debate and advocacy. In the undergraduate moot court circuit,
 teams of two students face another pair in a mock-appellate court setting. The competition usually consists of one day of randomly-assigned
 rounds, followed by a second day for the top-ranking teams.
