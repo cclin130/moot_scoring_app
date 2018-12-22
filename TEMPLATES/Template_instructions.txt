@@ -1,0 +1,13 @@
+-------------------------scores_TEMPLATE.csv------------------------
+In this csv, we will have an entry per competitor, per round, per judge.
+For example, given a room that has four competitors and four judges in a certain round,
+that round will have 16 entries in the scores csv (4 judges x 4 oralists = 16).
+
+For each row, input a competitor's ID, the ID of a judge that evaluated the competitor,
+and the score that judge gave. If you have k rounds, and each round has j judges,
+you will have k x j rows for each unique competitor.
+
+-------------------------teams_TEMPLATE.csv-------------------------
+In this csv, we will have one entry per competitor. The competitor's accompanying information,
+such as teamID, competitorID, name, and school will be included in that competitor's
+respective row.
