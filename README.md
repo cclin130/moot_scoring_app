@@ -13,8 +13,7 @@ As well, University of Toronto's Undergraduate Moot Court Team assisted by provi
 # Running the program
 The application requires 2 csv files, one with all participants' names, schools, teamIDs and competitorIDs,
 and one with every score a participant received (with each row representing a different judge's score).
-These csv's can be based off the two found in the TEMPLATES folder, and should follow the formats given by the [Templates_instruction textfile]
-(https://github.com/cclin130/moot_scoring_app/blob/master/TEMPLATES/Template_instructions.txt).
+These csv's can be based off the two found in the TEMPLATES folder, and should follow the formats given by the [Templates_instruction textfile](https://github.com/cclin130/moot_scoring_app/blob/master/TEMPLATES/Template_instructions.txt).
 
 # How the program works
 
