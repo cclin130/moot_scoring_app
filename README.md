@@ -1,5 +1,5 @@
 # University Moot Competition Scoring Application
-Moot competitions are a type of public-speaking competition that focuses on legal debate and advocacy. In the undergraduate moot court circuit,
+Moot competitions are a type of public-speaking competition that focus on legal debate and advocacy. In the undergraduate moot court circuit,
 teams of two students face another pair in a mock-appellate court setting. The competition usually consists of one day of randomly-assigned
 rounds, followed by a second day for the top-ranking teams.
 
@@ -12,13 +12,22 @@ As well, University of Toronto's Undergraduate Moot Court Team assisted by provi
 
 ## Running the program
 The application requires 2 csv files, one with all participants' names, schools, teamIDs and competitorIDs,
-and one with every score a participant received (with each row representing a different judge's score).
-These csv's can be based off the two found in the TEMPLATES folder, and should follow the formats given by the [Templates_instruction textfile](https://github.com/cclin130/moot_scoring_app/blob/master/TEMPLATES/Template_instructions.txt).
+and one with every score a participant received on the first day (with each row representing a different judge's score).
+These csv's should be based off the two found in the TEMPLATES folder, and should follow the formats given by the [Templates_instruction textfile](https://github.com/cclin130/moot_scoring_app/blob/master/TEMPLATES/Template_instructions.txt).
 
-To run the program, only the moot_scorer.exe file is needed. Run the executable, input the full file path of the teams.csv and scores.csv
-files into the correct text boxes, as well as the file path of where you want the output csv's to be saved.
+To run the program, download the moot_scorer.zip folder from [here](https://drive.google.com/file/d/1BVVbFuVo_kIeYv74c4RozrIFh8VN0Nh3/view?usp=sharing).
+Run the moot_scorer.exe file in the zip folder which will open the following application:
 
 ![alt text](https://github.com/cclin130/moot_scoring_app/blob/master/app_screenshot.png)
+
+Once this app opens, input the full file path of the two csvs required (one with the team information and one with all the scores)
+into the correct text boxes, as well as the file path of where you want the output csv's to be saved. Then, click the "Calculate final scores"
+button.
+
+The program will output the following three files:
+-scores_full_[date].csv: the same csv as the one with all the scores with an additional column showing adjusted scores
+-scores_individual_[date].csv: csv of each individuals' average scores (adjusted and non-adjusted), ordered by score
+-scores_team_[date].csv: csv of each teams' average scores (adjusted and non-adjusted), ordered by score
 
 ## How the program works
 
