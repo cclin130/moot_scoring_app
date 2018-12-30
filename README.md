@@ -15,6 +15,9 @@ The application requires 2 csv files, one with all participants' names, schools,
 and one with every score a participant received (with each row representing a different judge's score).
 These csv's can be based off the two found in the TEMPLATES folder, and should follow the formats given by the [Templates_instruction textfile](https://github.com/cclin130/moot_scoring_app/blob/master/TEMPLATES/Template_instructions.txt).
 
+To run the program, only the moot_scorer.exe file is needed. Run the executable, input the full file path of the teams.csv and scores.csv
+files into the correct text boxes, as well as the file path of where you want the output csv's to be saved.
+
 # How the program works
 
 ![alt text](https://github.com/cclin130/moot_scoring_app/blob/master/program_overview.png)

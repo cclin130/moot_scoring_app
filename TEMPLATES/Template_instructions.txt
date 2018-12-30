@@ -1,3 +1,5 @@
+For both csv's, DO NOT change any of the header labels; only add new rows of data.
+
 -------------------------scores_TEMPLATE.csv------------------------
 In this csv, we will have an entry per competitor, per round, per judge.
 For example, given a room that has four competitors and four judges in a certain round,
