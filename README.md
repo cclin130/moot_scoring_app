@@ -10,7 +10,7 @@ This will (roughly) eliminate the advantage of receiving only "easy" judges.
 The normalization process described below was first implemented by Alex Marchi of McGill University.
 As well, University of Toronto's Undergraduate Moot Court Team assisted by providing sample data and details.
 
-# Running the program
+## Running the program
 The application requires 2 csv files, one with all participants' names, schools, teamIDs and competitorIDs,
 and one with every score a participant received (with each row representing a different judge's score).
 These csv's can be based off the two found in the TEMPLATES folder, and should follow the formats given by the [Templates_instruction textfile](https://github.com/cclin130/moot_scoring_app/blob/master/TEMPLATES/Template_instructions.txt).
@@ -20,7 +20,7 @@ files into the correct text boxes, as well as the file path of where you want th
 
 ![alt text](https://github.com/cclin130/moot_scoring_app/blob/master/app_screenshot.png)
 
-# How the program works
+## How the program works
 
 ![alt text](https://github.com/cclin130/moot_scoring_app/blob/master/program_overview.png)
 
