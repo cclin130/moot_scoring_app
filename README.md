@@ -26,11 +26,9 @@ button.
 
 The program will output the following three files:
 
--scores_full_[date].csv: the same csv as the one with all the scores with an additional column showing adjusted scores
-
--scores_individual_[date].csv: csv of each individuals' average scores (adjusted and non-adjusted), ordered by score
-
--scores_team_[date].csv: csv of each teams' average scores (adjusted and non-adjusted), ordered by score
+- scores_full_[date].csv: the same csv as the one with all the scores with an additional column showing adjusted scores
+- scores_individual_[date].csv: csv of each individuals' average scores (adjusted and non-adjusted), ordered by score
+- scores_team_[date].csv: csv of each teams' average scores (adjusted and non-adjusted), ordered by score
 
 ## How the program works
 
