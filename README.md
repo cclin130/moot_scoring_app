@@ -18,6 +18,8 @@ These csv's can be based off the two found in the TEMPLATES folder, and should f
 To run the program, only the moot_scorer.exe file is needed. Run the executable, input the full file path of the teams.csv and scores.csv
 files into the correct text boxes, as well as the file path of where you want the output csv's to be saved.
 
+![alt text](https://github.com/cclin130/moot_scoring_app/blob/master/app_screenshot.png)
+
 # How the program works
 
 ![alt text](https://github.com/cclin130/moot_scoring_app/blob/master/program_overview.png)
