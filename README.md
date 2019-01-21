@@ -15,8 +15,8 @@ The application requires 2 csv files, one with all participants' names, schools,
 and one with every score a participant received on the first day (with each row representing a different judge's score).
 These csv's should be based off the two found in the TEMPLATES folder, and should follow the formats given by the [Templates_instruction textfile](https://github.com/cclin130/moot_scoring_app/blob/master/TEMPLATES/Template_instructions.txt).
 
-To run the program, download the moot_scorer.zip folder from [here](https://drive.google.com/file/d/1BVVbFuVo_kIeYv74c4RozrIFh8VN0Nh3/view?usp=sharing).
-Run the moot_scorer.exe file in the zip folder which will open the following application:
+To run the program, either run the moot_scorer_GUI.py file or download the moot_scorer executable contained in the following [zipped folder](https://drive.google.com/file/d/17DzAGimxlqDXLask1V-S3GJttERcTW-k/view?usp=sharing).
+Running either will open the following application:
 
 ![alt text](https://github.com/cclin130/moot_scoring_app/blob/master/app_screenshot.png)
 
