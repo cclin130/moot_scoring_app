@@ -1,6 +1,5 @@
 from tkinter import *
 import pandas as pd
-import numpy as np
 import datetime
 
 def build_window():
@@ -44,14 +43,12 @@ def calculate_scores(teams_csv_path, scores_csv_path, output_path):
     #get each judge's avg and std scores
     df_judge_avgs = df_scores.groupby('judgeID')\
         .mean()\
-        .reset_index()\
-        .drop('competitorID', axis=1)
+        .reset_index()
     df_judge_avgs.columns = ['judgeID', 'judge_avg']
 
     df_judge_stds = df_scores.groupby('judgeID')\
         .std()\
-        .reset_index()\
-        .drop('competitorID', axis=1)
+        .reset_index()
     df_judge_stds.columns = ['judgeID', 'judge_std']
 
     #overall judge average and std
@@ -70,6 +67,39 @@ def calculate_scores(teams_csv_path, scores_csv_path, output_path):
                                           *std_score) + avg_score
 
     #using transformed scores, get individual and team rankings
+    # get individual rankings
+    df_participant_scores = df_scores_new.groupby('competitorID').mean()\
+        .reset_index() \
+        .drop(['judge_avg', 'judge_std', 'score_zscore'], axis=1)
+
+    # reformat individual rankings table, with participant names
+    df_participant_scores_final = df_participant_scores.merge(df_teams, on='competitorID', how='left') \
+        [['competitorID', 'competitor_name', 'competitor_school', 'score_raw', 'score_final']] \
+        .sort_values('score_final', ascending=False)
+
+    # get team rankings
+    df_team_scores = df_scores_new.drop(['judge_avg', 'judge_std', 'score_zscore'], axis=1) \
+        .merge(df_teams, on='competitorID', how='left') \
+        .groupby('teamID').mean() \
+        .reset_index()
+
+    # reformat df_teams for easier merging later on
+    df_teams2 = df_teams.drop_duplicates('teamID').merge(df_teams, on='teamID', how='left', suffixes=('_1', '_2'))
+    df_teams2 = df_teams2.loc[df_teams2['competitorID_1'] != df_teams2['competitorID_2'], :] \
+        .reset_index(drop=True)
+
+    df_team_scores_final = \
+    df_team_scores.merge(df_teams2, on='teamID', how='left').sort_values('score_final', ascending=False)\
+        [['teamID', 'competitorID_1', 'competitor_name_1', 'competitorID_2', 'competitor_name_2',\
+          'competitor_school', 'score_raw', 'score_final']]
+
+    # output all dataframes to csv's
+    now = datetime.datetime.now()
+    timestamp = now.strftime('%Y-%m-%d')
+
+    df_scores_new.round(decimals=1).to_csv('{0}\scores_full_{1}.csv'.format(output_path, timestamp), index=False)
+    df_participant_scores_final.round(decimals=1).to_csv('{0}\scores_individual_{1}.csv'.format(output_path, timestamp), index=False)
+    df_team_scores_final.round(decimals=1).to_csv('{0}\scores_team_{1}.csv'.format(output_path, timestamp), index=False)
 
 
 if __name__ == '__main__':
